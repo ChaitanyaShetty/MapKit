@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5Tc-1n-TvX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9r8-OU-7FB">
+                                <rect key="frame" x="20" y="550" width="90" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WAC-Td-D4h"/>
+                                    <constraint firstAttribute="width" constant="90" id="vft-Za-MrG"/>
+                                </constraints>
+                                <state key="normal" title="ChangeMap"/>
+                                <connections>
+                                    <action selector="ChangeMap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="axf-1v-yM3"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="0TZ-B3-f4N">
+                                <rect key="frame" x="486" y="551" width="94" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="BHG-zD-xPc"/>
+                                    <constraint firstAttribute="height" constant="29" id="eA4-r4-IO1"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="didClickStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="IbU-Tu-wmy"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0TZ-B3-f4N" secondAttribute="bottom" constant="20" id="7so-0F-D55"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9r8-OU-7FB" secondAttribute="bottom" constant="20" id="9rP-Pd-Sh0"/>
+                            <constraint firstItem="0TZ-B3-f4N" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="AcX-JN-PnY"/>
+                            <constraint firstItem="5Tc-1n-TvX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="UA6-2f-iRy"/>
+                            <constraint firstItem="9r8-OU-7FB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="b2V-8t-CEc"/>
+                            <constraint firstItem="5Tc-1n-TvX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="cRf-IZ-lLP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Tc-1n-TvX" secondAttribute="bottom" id="md0-h5-IIN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Tc-1n-TvX" secondAttribute="trailing" constant="-20" id="ngN-cS-XAS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="5Tc-1n-TvX" id="nwR-VS-MkN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431" y="297"/>
+        </scene>
+    </scenes>
+</document>
